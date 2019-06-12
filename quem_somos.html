@@ -1,0 +1,349 @@
+<!doctype html>
+<html class="no-js" lang="pt-br">
+	<head>
+		<!-- ESSE PROJETO FOI OTIMIZADO COM O FRAMEWORK ZURB FOUNDATION 6 -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Iniciantes do Violão</title>
+		<link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+		<script  type = "text/javascript" src="js/funcoes.js"></script>
+
+		<!--FORMATAÇÃO DO ESTILO PARA PARA O CARTÃO DE INFORMAÇÃO DOS INSTRUTORES -->
+		<style type="text/css">
+			
+			.card-user-container {
+			  margin-bottom: 1rem;
+			  background-color: #fefefe;
+			  color: #0a0a0a;
+			  overflow: hidden;
+			  padding: 0;
+			  border-radius: 0;
+			}
+
+			.card-user-container .card-user-avatar .user-image {
+			  display: block;
+			  margin: auto;
+			  border-radius: 50%;
+			  width: 11.875rem;
+			  height: 11.875rem;
+			  padding: 0.9375rem;
+			}
+
+			.card-user-container .card-user-avatar .user-image:hover {
+			  -webkit-transform: scale(1.1);
+			      -ms-transform: scale(1.1);
+			          transform: scale(1.1);
+			}
+
+			.card-user-container .card-user-bio {
+			  padding: 1rem;
+			  text-align: center;
+			}
+
+			.card-user-container .card-user-bio .location {
+			  display: inline-block;
+			  margin: 0 0.9375rem;
+			  color: #767676;
+			  font-size: 0.875rem;
+			}
+
+			.card-user-container .card-user-bio .location-icon,
+			.card-user-container .card-user-bio .location-text {
+			  display: inline-block;
+			  padding: 0 0.3125rem;
+			}
+
+			.card-user-container .card-user-social {
+			  background: #e6e6e6;
+			  padding: 1rem;
+			  text-align: center;
+			}
+
+			.card-user-container .card-user-social ul {
+			  display: inline-block;
+			}
+
+			.card-user-container .card-user-social ul li {
+			  margin: 0 10px;
+			  font-size: 1.2em;
+			  cursor: pointer;
+			}
+
+			.card-user-container .card-user-social ul li:hover {
+			  -webkit-transform: scale(1.1);
+			      -ms-transform: scale(1.1);
+			          transform: scale(1.1);
+			}
+
+			.card-user-container .card-user-button {
+			  text-align: center;
+			  padding: 1rem;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- FOI ADICIONADO O TEMPLATE DO MODELO BLOG COM BARRA LATERAL COM ALGUNS BLOCOS DE CONSTRUÇÃO ESPECÍFICOS https://foundation.zurb.com/templates-previews-sites-f6-xy-grid/blog.html-->
+
+		
+		 <!-- CABEÇALHO -->
+		 <!-- FOI ADICIONADO O BLOCO DE NAVEGAÇÃO OCULTA COM ALTERAÇÕES https://foundation.zurb.com/building-blocks/blocks/scrollhide-nav.html-->
+
+		<nav class="scrollhide-nav">
+			
+		      <ul class="dropdown menu" data-dropdown-menu >
+		        <li>
+		          <a  class="a1" href="#">Postagens</a>
+		          <ul class="menu vertical">
+		            <li><a class="a2" href="dicas.html">Dicas Iniciais</a></li>
+		            <li><a class="a2" href="primeiro_violao.html">Primeiro Violão</a></li>
+		            <li><a class="a2" href="palheta.html">Como segurar a palheta</a></li>
+		            <li><a class="a2" href="dom_pratica.html">Dom vs Prática</a></li>
+		          </ul>
+		           <li>
+		          <a class="a1" href="#">Sobre</a>
+		          <ul class="menu vertical">
+		            <li><a class="a2" href="quem_somos.html">Quem Somos</a></li>
+		            <li><a class="a2" href="cadastro.html">Cadastro</a></li>
+		            <li><a class="a2" href="privacidade.html">Política de Privacidade</a></li>
+		          </ul>
+		        </li>
+		        <li><a class="a1" href="#contato">Contato</a></li>
+		      </ul>  
+		</nav>
+
+		 <!-- BANNER (header) -->
+		<div class="top-bar">
+			<header>
+				<center><a href="index.html"><img src="img/iniciantes.png" width="310"  /></a></center> 
+			</div>
+			</header>
+		</div>
+        <br><br>
+
+         <!-- ÍCONES LATERAIS FIXO -->
+         <!-- FOI ADICIONADO UMA BARRA SOCIAL FIXA COM ALTERAÇÕES https://foundation.zurb.com/building-blocks/blocks/sticky-social-bar.html-->
+         <div class="show-for-large">  <!--FOI ADICIONADO UMA CLASSE DE VISUALIZAÇÃO DENTRO DESSA DIV PARA ESSES ÍCONES LATERAIS FIXO APARECEREM SOMENTE EM TELA LARGA -->
+			<ul class="sticky-social-bar">
+			  <li class="social-icon">
+			    <a href="https://www.facebook.com/" target="_blank"> 
+			      <i class="fa fa-facebook" aria-hidden="true"></i>
+			      <span class="social-icon-text">Facebook</span>
+			    </a>
+			  </li>
+			  <li class="social-icon">
+			    <a href="https://www.youtube.com/results?search_query=iniciantes+do+viol%C3%A3o">
+			      <i class="fa fa-youtube" aria-hidden="true"></i>
+			      <span class="social-icon-text">Youtube</span>
+			    </a>
+			  </li>
+			  <li class="social-icon">
+			    <a href="https://www.instagram.com/?hl=pt-br/" target="_blank">
+			      <i class="fa fa-instagram" aria-hidden="true"></i>
+			      <span class="social-icon-text">Instagram</span>
+			    </a>
+			  </li>
+			</ul>
+		</div>
+
+		<!-- CONTEÚDO(ARTICLE) -->
+		<div class="row" id="content">
+			<div class="medium-8 columns">
+				<!--DIV COM ÍCONES SOCIAS IMPLEMENTADAS-->
+				<div class="show-for-small-only"> <!-- FOI ADICIONADO UMA CLASSE DE VISUALIZAÇÃO DENTRO DESSA DIV PARA ESSES ÍCONES APAREÇAM SOMENTE EM TELA PEQUENA -->
+					<a href="https://www.facebook.com/" target="_blank"><img class="thumbnail" src="img/facebook.png" width="35" height="35"></a>
+					<a href="https://www.youtube.com/results?search_query=iniciantes+do+viol%C3%A3o" target="_blank"><img class="thumbnail" src="img/youtube.png" width="35" height="35"></a>
+					<a href="https://www.instagram.com/?hl=pt-br/" target="_blank"><img class="thumbnail" src="img/instagram.png" width="35" height="35"></a>
+				</div>
+				<!--DIV COM ÍCONES SOCIAS IMPLEMENTADAS-->
+				<div class="show-for-medium-only"><!-- FOI ADICIONADO UMA CLASSE DE VISUALIZAÇÃO DENTRO DESSA DIV PARA ESSES ÍCONES APAREÇAM SOMENTE EM TELA MÉDIA -->
+					<a href="https://www.facebook.com/" target="_blank"><img class="thumbnail" src="img/facebook.png" width="35" height="35"></a>
+					<a href="https://www.youtube.com/results?search_query=iniciantes+do+viol%C3%A3o" target="_blank"><img class="thumbnail" src="img/youtube.png" width="35" height="35"></a>
+					<a href="https://www.instagram.com/?hl=pt-br/" target="_blank"><img class="thumbnail" src="img/instagram.png" width="35" height="35"></a>
+				</div>
+
+				<!--FOI ADICIONADO O BLOCO COM CARTÃO DE INFORMAÇÃO DO USUÁRIO, ADAPTADO PARA OS INSTRUTORES E PROFESSORES https://foundation.zurb.com/building-blocks/blocks/user-card.html -->
+		<script>Data()</script><br><br>
+				<div class="blog-post">
+					
+						
+						<div class="callout">
+							<ul class="menu simple">
+								<li><h3><b>Quem Somos</b></h3></li>
+							</ul>
+						</div>
+						 <p>A equipe do Iniciantes do Violão e formada por instrutores de alto nível e dedicação total aos alunos, com o serviço e atendimento de qualidade. Confira os Instrutores abaixo.</p>
+						 <hr>
+
+						<div class="card-user-container">
+						  <div class="card-user-avatar">
+						    <img src="img/rafael.jpg" alt="" class="user-image">
+						  </div>
+						  <div class="card-user-bio">
+						    <h4><b>Rafael Oliveira</b></h4>
+						    <p>Instrutor de Violão, experiência com alunos iniciantes, apaixonado pela música e por violão. </p>
+						    <p><i class="fa fa-phone fa-lg" aria-hidden="true"></i> (61) 9 9409-0853</p>
+						    <span class="location"><span class="location-icon fa fa-map-marker"></span><span class="location-text"><b>Brasilia - DF</b></span></span>
+						  </div>
+						  <div class="card-user-social">
+						    <ul >
+						      <a href="##" target="_blank"><li class="fa fa-facebook"></li></a>
+						      <a href="##" target="_blank"><li class="fa fa-instagram"></li></a>
+						      
+						    </ul>
+						  </div>
+						</div>
+						<hr>
+						<div class="card-user-container">
+						  <div class="card-user-avatar">
+						    <img src="https://placehold.it/200x200" alt="" class="user-image">
+						  </div>
+						  <div class="card-user-bio">
+						    <h4><b>Mateus</b></h4>
+						    <p>......... </p>
+						    <p><i class="fa fa-phone fa-lg" aria-hidden="true"></i> (61) ***********</p>
+						    <span class="location"><span class="location-icon fa fa-map-marker"></span><span class="location-text"><b>Brasilia - DF</b></span></span>
+						  </div>
+						  <div class="card-user-social">
+						    <ul >
+						      <a href="##" target="_blank"><li class="fa fa-facebook"></li></a>
+						      <a href="##" target="_blank"><li class="fa fa-instagram"></li></a>
+						      
+						    </ul>
+						  </div>
+						</div>
+						<hr>
+						<div class="card-user-container">
+						  <div class="card-user-avatar">
+						    <img src="https://placehold.it/200x200" alt="" class="user-image">
+						  </div>
+						  <div class="card-user-bio">
+						    <h4><b>Deivid</b></h4>
+						    <p>..... </p>
+						    <p><i class="fa fa-phone fa-lg" aria-hidden="true"></i> (61) ***********</p>
+						    <span class="location"><span class="location-icon fa fa-map-marker"></span><span class="location-text"><b>Brasilia - DF</b></span></span>
+						  </div>
+						  <div class="card-user-social">
+						    <ul >
+						      <a href="##" target="_blank"><li class="fa fa-facebook"></li></a>
+						      <a href="##" target="_blank"><li class="fa fa-instagram"></li></a>
+						      
+						    </ul>
+						  </div>
+						</div>
+						<hr>
+
+						<p>Gostou da nossa equipe? então cadastra-se.</p>
+
+						<div class="callout">
+							<ul class="menu simple">
+								<li><a href="cadastro.html">Cadastro </a></li>
+								<li><a href="index.html">Página Inicial </a></li>
+								
+							</ul>
+						</div>
+				</div>
+		</div>
+
+		 <!-- COLUNA LATERAL (ASIDE) -->
+		<div class="medium-3 columns" data-sticky-container>
+			<div class="sticky" data-sticky data-anchor="content">
+				<h4><b>&emsp;Top Marcas</b></h4>
+				<ul>
+					
+						<a href="http://www.tagima.com.br/" target="_blank"><img class="thumbnail" src="img/tagima.png" width="200" height="200"></a>
+						<a href="http://eagle.com.br/violao/eagle/folk/#" target="_blank"><img class="thumbnail" src="img/eagle.png" width="200" height="200"></a>
+						<a href="https://www.takamine.com/" target="_blank"><img class="thumbnail" src="img/takamine.png" width="200" height="200"></a>
+						<a href="https://br.yamaha.com/pt/products/musical_instruments/guitars_basses/ac_guitars/index.html" target="_blank"><img class="thumbnail" src="img/yamaha.png" width="200" height="200"></a>
+						<a href="https://www.taylorguitars.com/" target="_blank"><img class="thumbnail" src="img/taylor.png" width="200" height="100"></a>
+						
+	
+				</ul>	
+			</div>
+		</div>
+		</div>
+		 <!-- COLUNA LATERAL (ASIDE) -->
+		<br>
+		<div class="row column">
+			<ul class="pagination" role="navigation" aria-label="Pagination">
+				<li class="disabled">Anterior</li>
+				<li class="current"><span class="show-for-sr">You're on page</span> 1</li>
+				<li><a href="page2.html" aria-label="Page 2">2</a></li>
+				<li class="ellipsis"></li>
+				<li><a href="page2.html" aria-label="Next page">Próxima</a></li>
+			</ul>
+		</div>
+		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+		<script>
+		      $(document).foundation();
+		</script>
+		<hr>
+		<br>
+		<!--DIV COM ÍCONES SOCIAS IMPLEMENTADAS-->
+		<div class="show-for-small-only"> <!-- FOI ADICIONADO UMA CLASSE DE VISUALIZAÇÃO DENTRO DESSA DIV PARA ESSES ÍCONES APAREÇAM SOMENTE EM TELA PEQUENA NO FOOTER -->
+			<a href="https://www.facebook.com/" target="_blank"><img class="thumbnail" src="img/facebook.png" width="35" height="35"></a>
+			<a href="https://www.youtube.com/results?search_query=iniciantes+do+viol%C3%A3o" target="_blank"><img class="thumbnail" src="img/youtube.png" width="35" height="35"></a>
+			<a href="https://www.instagram.com/?hl=pt-br/" target="_blank"><img class="thumbnail" src="img/instagram.png" width="35" height="35"></a>
+		</div>
+		<!--DIV COM ÍCONES SOCIAS IMPLEMENTADAS-->
+		<div class="show-for-medium-only"><!-- FOI ADICIONADO UMA CLASSE DE VISUALIZAÇÃO DENTRO DESSA DIV PARA ESSES ÍCONES APAREÇAM SOMENTE EM TELA MÉDIA NO FOOTER -->
+			<a href="https://www.facebook.com/" target="_blank"><img class="thumbnail" src="img/facebook.png" width="35" height="35"></a>
+			<a href="https://www.youtube.com/results?search_query=iniciantes+do+viol%C3%A3o" target="_blank"><img class="thumbnail" src="img/youtube.png" width="35" height="35"></a>
+			<a href="https://www.instagram.com/?hl=pt-br/" target="_blank"><img class="thumbnail" src="img/instagram.png" width="35" height="35"></a>
+		</div>
+
+		<!-- FOI ADICIONADO O BLOCO RODAPÉ DA COLUNA COM FORMULÁRIO DE CONTATO COM ALTERAÇÕES  https://foundation.zurb.com/building-blocks/blocks/3-column-footer-contact-form.html-->
+	    <div  id="contato" class="three-column-footer-contact-form-container">
+	      <footer class="three-column-footer-contact-form" data-equalizer data-equalize-by-row="true">
+
+	        <div class="footer-left" data-equalizer-watch>
+	          <div class="baseline">
+	            <div class="contact-details">
+	              <h6>Contato</h6>
+	              <p><i class="fa fa-phone fa-lg" aria-hidden="true"></i> (61) ***********</p>
+	              <p><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i> Endereço</a></p>
+	              <p><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i> ****, Brasília-DF, Brasil</p>
+	            </div>
+	            
+	          </div>
+	         </div>
+	        <div class="footer-center" data-equalizer-watch>
+	          <div class="baseline">
+	            <div class="newsletter">
+	             <h6>Entre em Contato</h6>
+	              <div class="input-group ">
+	              <form data-abide> <!-- FORMULÁRIO COM O ATRIBUTO DE VALIDAÇÃO DO FOUNDATION-->
+		            <input class="input-group-field" type="text" placeholder="Name" required pattern="[a-zA-Z]+">
+		   
+		            <input class="input-group-field" type="email" placeholder="Email address"  required>
+		            <textarea placeholder="Message" required></textarea>
+		          </div>
+	              <center><button class="button" type="submit" >Enviar</button></a></center>
+	            </div>
+	          </div>
+	        </div>
+	        <div class="footer-right" data-equalizer-watch>
+	          <div class="baseline">
+
+	            <a href="index.html" ><img class="thumbnail" src="img/iniciantes.png" width="200" height="200"></a>
+	            <h6>Disponibilidade</h6>
+	            <p>Seg - Sex 9:00 - 17:00</p>
+	            <p>Sab - Dom 9:00 - 13:00</p>
+	              <br> 
+	              <p><b>© 2019 Iniciantes do Violão</b></p>
+
+	          </div>
+	        </div>
+	      </footer>
+	</body>
+</html>
+
+
+<!-- LINKS -->
+<!-- TEMPLATE .........................https://foundation.zurb.com/templates-previews-sites-f6-xy-grid/blog.html -->
+<!-- NAV ..............................https://foundation.zurb.com/building-blocks/blocks/scrollhide-nav.html -->
+<!-- ÍCONES FIXOS LATERAIS ............https://foundation.zurb.com/building-blocks/blocks/sticky-social-bar.html -->
+<!-- FOOTER ...........................https://foundation.zurb.com/building-blocks/blocks/3-column-footer-contact-form.html -->
+<!-- INFORMAÇÃO DOS INSTRUTORES .......https://foundation.zurb.com/building-blocks/blocks/user-card.html -->

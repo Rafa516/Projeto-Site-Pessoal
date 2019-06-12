@@ -1,0 +1,567 @@
+<!doctype html>
+<html class="no-js" lang="pt-br">
+	<head>
+		<!-- ESSE PROJETO FOI OTIMIZADO COM O FRAMEWORK ZURB FOUNDATION 6 -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Iniciantes do Violão</title>
+		<link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+		<script  type = "text/javascript" src="js/funcoes.js"></script>
+		
+		<!--FORMATAÇÃO DO ESTILO DO FORMULÁRIO DE CADASTRO -->
+		<style type="text/css">
+			.multi-step-checkout-process-step {
+			  margin-top: 20px;
+			  margin-bottom: 3rem;
+
+			}
+
+
+			@media screen and (max-width: 39.9375em) {
+			  .multi-step-checkout-process-step {
+			    padding-right: 0rem;
+			  }
+			}
+
+			.multi-step-checkout-process .accordion-title {
+			  color: #3e3e3e;
+			  font-size: 1.25rem;
+			  transition: color 0.5s ease;
+			  border: none;
+			  font-family: 'Droid serif', serif;
+			}
+
+			.multi-step-checkout-process .accordion-title:hover, .multi-step-checkout-process .accordion-title:active, .multi-step-checkout-process .accordion-title:focus {
+			  color: #242424;
+			  transition: color 0.5s ease;
+			  background: none;
+			}
+
+			.multi-step-checkout-process :last-child:not(.is-active) > .accordion-title {
+			  border: none;
+			}
+
+			.multi-step-checkout-process .accordion-item {
+			  border-bottom: 1px solid #e6e6e6;
+			  padding-right: 0.8rem;
+			}
+
+			.multi-step-checkout-process .accordion-item:first-child() {
+			  border-top: 1px solid #e6e6e6;
+			}
+
+			.multi-step-checkout-process .accordion-item.is-active {
+			  border: 1px solid #e6e6e6;
+			  border-top: 3px solid #1779ba;
+			  border-radius: 3px;
+			  box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.1);
+			}
+
+			.multi-step-checkout-process .accordion-item .accordion-title {
+			  font-weight: 400;
+			}
+
+			.multi-step-checkout-process .accordion-item .accordion-title::before {
+			  right: 0.5rem;
+			}
+
+			.multi-step-checkout-process .accordion-content {
+			  border: none;
+			  padding-left: 35px;
+			}
+
+			.multi-step-checkout-process :last-child > .accordion-content:last-child {
+			  border-bottom: none;
+			}
+
+			.multi-step-checkout-step-title-subheader {
+			  color: #a4a4a4;
+			  font-size: 0.9rem;
+			  display: inline-block;
+			  margin-left: 10px;
+			  font-family: 'Open sans', serif;
+			}
+
+			.multi-step-checkout-step-subheader {
+			  color: #3e3e3e;
+			  font-size: 0.9rem;
+			  font-weight: 600;
+			  font-family: 'Open sans', sans-serif;
+			}
+
+			.multi-step-checkout-step-subdesc {
+			  color: #8a8a8a;
+			  font-size: 0.9rem;
+			}
+
+			.multi-step-checkout-shipping-option {
+			  margin-bottom: 10px;
+			}
+
+			.multi-step-checkout-step-section {
+			  border-bottom: 1px dashed #e6e6e6;
+			  padding-bottom: 10px;
+			  margin-bottom: 20px;
+			}
+
+			.multi-step-checkout-shipping-option-selection {
+			  position: absolute;
+			  margin-top: 0.2rem;
+			}
+
+			.multi-step-checkout-shipping-option-title {
+			  display: block;
+			  font-size: 0.9rem;
+			  line-height: 1.4rem;
+			  margin-left: 1.6rem;
+			  margin-bottom: 0.8rem;
+			}
+
+			.multi-step-checkout-shipping-option-desc {
+			  font-size: 0.9rem;
+			  color: #8a8a8a;
+			  margin-left: 25px;
+			  margin-top: -10px;
+			}
+
+			.multi-step-checkout-shipping-cost {
+			  text-align: right;
+			}
+
+			.multi-step-checkout-form-divider {
+			  border-bottom: 1px dashed #e6e6e6;
+			}
+
+			.multi-step-checkout-form input {
+			  background: #f8f8f8;
+			}
+
+			.multi-step-checkout-enews-sign-up label {
+			  position: relative;
+			  margin-left: 1.5rem;
+			  margin-bottom: 1.5rem;
+			}
+
+			.multi-step-checkout-enews-sign-up-checkbox {
+			  position: absolute;
+			  margin-top: 0.4rem;
+			}
+
+			.multi-step-checkout-credit-card-info label span {
+			  color: #a4a4a4;
+			}
+
+			.multi-step-checkout-payment-icons {
+			  list-style: none;
+			  margin-left: 0;
+			  margin-bottom: 1rem;
+			}
+
+			.multi-step-checkout-payment-icons li {
+			  display: inline;
+			}
+
+			.multi-step-checkout-billing-address .multi-step-checkout-billing-address-list {
+			  list-style: none;
+			  margin-left: 1.5rem;
+			  margin-top: 1rem;
+			  margin-bottom: 0.8rem;
+			  color: #8a8a8a;
+			  font-size: 0.9rem;
+			}
+
+			.multi-step-checkout-billing-address .multi-step-checkout-billing-address-checkbox {
+			  position: absolute;
+			  margin-top: 0.4rem;
+			}
+
+			.multi-step-checkout-billing-address label {
+			  margin-left: 1.5rem;
+			}
+
+			.multi-step-checkout-create-account {
+			  margin-top: 2rem;
+			}
+
+			@media screen and (max-width: 39.9375em) {
+			  .multi-step-checkout-create-account {
+			    margin-top: 0.5rem;
+			  }
+			}
+
+			.multi-step-checkout-create-account .create-account-desc {
+			  font-size: 0.9rem;
+			  color: #8a8a8a;
+			}
+
+			.multi-step-checkout-logo {
+			  width: 118px;
+			  height: 38px;
+			}
+
+			.multi-step-checkout-arrow {
+			  height: 13px;
+			  width: 13px;
+			}
+		</style>
+
+	</head>
+	<body>
+		<!-- FOI ADICIONADO O TEMPLATE DO MODELO BLOG COM BARRA LATERAL COM ALGUNS BLOCOS DE CONSTRUÇÃO ESPECÍFICOS https://foundation.zurb.com/templates-previews-sites-f6-xy-grid/blog.html-->
+
+		
+		 <!-- CABEÇALHO -->
+		 <!-- FOI ADICIONADO O BLOCO DE NAVEGAÇÃO OCULTA COM ALTERAÇÕES https://foundation.zurb.com/building-blocks/blocks/scrollhide-nav.html-->
+
+		<nav class="scrollhide-nav">
+			
+		      <ul class="dropdown menu" data-dropdown-menu >
+		        <li>
+		          <a  class="a1" href="#">Postagens</a>
+		          <ul class="menu vertical">
+		            <li><a class="a2" href="dicas.html">Dicas Iniciais</a></li>
+		            <li><a class="a2" href="primeiro_violao.html">Primeiro Violão</a></li>
+		            <li><a class="a2" href="palheta.html">Como segurar a palheta</a></li>
+		            <li><a class="a2" href="dom_pratica.html">Dom vs Prática</a></li>
+		          </ul>
+		           <li>
+		          <a class="a1" href="#">Sobre</a>
+		          <ul class="menu vertical">
+		            <li><a class="a2" href="quem_somos.html">Quem Somos</a></li>
+		            <li><a class="a2" href="cadastro.html">Cadastro</a></li>
+		            <li><a class="a2" href="privacidade.html">Política de Privacidade</a></li>
+		          </ul>
+		        </li>
+		        <li><a class="a1" href="#contato">Contato</a></li>
+		      </ul>  
+		</nav>
+
+		 <!-- BANNER (header) -->
+		<div class="top-bar">
+			<header>
+				<center><a href="index.html"><img src="img/iniciantes.png" width="310"  /></a></center> 
+			</div>
+			</header>
+		</div>
+        <br><br>
+
+         <!-- ÍCONES LATERAIS FIXO -->
+         <!-- FOI ADICIONADO UMA BARRA SOCIAL FIXA COM ALTERAÇÕES https://foundation.zurb.com/building-blocks/blocks/sticky-social-bar.html-->
+         <div class="show-for-large">  <!--FOI ADICIONADO UMA CLASSE DE VISUALIZAÇÃO DENTRO DESSA DIV PARA ESSES ÍCONES LATERAIS FIXO APARECEREM SOMENTE EM TELA LARGA -->
+			<ul class="sticky-social-bar">
+			  <li class="social-icon">
+			    <a href="https://www.facebook.com/" target="_blank"> 
+			      <i class="fa fa-facebook" aria-hidden="true"></i>
+			      <span class="social-icon-text">Facebook</span>
+			    </a>
+			  </li>
+			  <li class="social-icon">
+			    <a href="https://www.youtube.com/results?search_query=iniciantes+do+viol%C3%A3o">
+			      <i class="fa fa-youtube" aria-hidden="true"></i>
+			      <span class="social-icon-text">Youtube</span>
+			    </a>
+			  </li>
+			  <li class="social-icon">
+			    <a href="https://www.instagram.com/?hl=pt-br/" target="_blank">
+			      <i class="fa fa-instagram" aria-hidden="true"></i>
+			      <span class="social-icon-text">Instagram</span>
+			    </a>
+			  </li>
+			</ul>
+		</div>
+
+		<!-- CONTEÚDO(ARTICLE) -->
+		<div class="row" id="content">
+			<div class="medium-8 columns">
+				<!--DIV COM ÍCONES SOCIAS IMPLEMENTADAS-->
+				<div class="show-for-small-only"> <!-- FOI ADICIONADO UMA CLASSE DE VISUALIZAÇÃO DENTRO DESSA DIV PARA ESSES ÍCONES APAREÇAM SOMENTE EM TELA PEQUENA -->
+					<a href="https://www.facebook.com/" target="_blank"><img class="thumbnail" src="img/facebook.png" width="35" height="35"></a>
+					<a href="https://www.youtube.com/results?search_query=iniciantes+do+viol%C3%A3o" target="_blank"><img class="thumbnail" src="img/youtube.png" width="35" height="35"></a>
+					<a href="https://www.instagram.com/?hl=pt-br/" target="_blank"><img class="thumbnail" src="img/instagram.png" width="35" height="35"></a>
+				</div>
+				<!--DIV COM ÍCONES SOCIAS IMPLEMENTADAS-->
+				<div class="show-for-medium-only"><!-- FOI ADICIONADO UMA CLASSE DE VISUALIZAÇÃO DENTRO DESSA DIV PARA ESSES ÍCONES APAREÇAM SOMENTE EM TELA MÉDIA -->
+					<a href="https://www.facebook.com/" target="_blank"><img class="thumbnail" src="img/facebook.png" width="35" height="35"></a>
+					<a href="https://www.youtube.com/results?search_query=iniciantes+do+viol%C3%A3o" target="_blank"><img class="thumbnail" src="img/youtube.png" width="35" height="35"></a>
+					<a href="https://www.instagram.com/?hl=pt-br/" target="_blank"><img class="thumbnail" src="img/instagram.png" width="35" height="35"></a>
+				</div>
+
+					<!--FORMULÁRIO DE CADASTRO COM 3 ETAPAS https://foundation.zurb.com/building-blocks/blocks/multi-step-checkout.html -->
+				<script>Data()</script><br><br>
+				<div class="blog-post">
+					
+						
+						<div class="callout">
+							<ul class="menu simple">
+								<li><h3><b>Cadastro</b></h3></li>
+							</ul>
+						</div>
+						<div class="multi-step-checkout-process">
+						  <div class="multi-step-checkout-process-step">
+						    <ul class="accordion" data-accordion>
+						      <li class="accordion-item is-active" data-accordion-item>
+						        <a href="#" class="accordion-title">1. Cadastro <span class="multi-step-checkout-step-title-subheader">Etapa 1 de 3</span></a>
+						        <div class="accordion-content" data-tab-content>
+						          <form class="multi-step-checkout-form">
+						            <div class="row">
+						              <div class="small-12 medium-9 column">
+						                <div class="shipping-address multi-step-checkout-step-section">
+						                 
+						                  <label>
+						                    Nome<input type="text" placeholder="Nome" required >
+						                    Sobrenome<input type="text" placeholder="Sobrenome" required >
+						                    Endereço<input type="text" placeholder="Endereço" required >
+						                    <div class="row">
+						                      <div class="small-12 medium-7 column">
+						                        Cidade<input type="text" placeholder="Cidade" required >
+						                      </div>
+
+						                      <div class="small-6 medium-2 column">
+						                        Estado<select required >
+						                          <option value="state1">DF</option>
+						                          <option value="state2">SP</option>
+						                          <option value="state3">RJ</option>
+						                          <option value="state4">GO</option>
+						                          <option value="state5">BA</option>
+						                        </select>
+						                      </div>
+						                     
+						                    </div>
+
+						                    <div><hr class="multi-step-checkout-form-divider"></div>
+						                    Email<input type="email" placeholder="Email" required >
+						                    Celular<input type="text" placeholder=" xxxx-xxx-xxxx" required pattern="^\d{4}-\d{3}-\d{4}$" />
+						                  </label>
+						                </div>
+						               
+						                <div class="multi-step-checkout-enews-sign-up">
+						                  <fieldset>
+						                    <input class="multi-step-checkout-enews-sign-up-checkbox" id="multi-step-checkout-enews-sign-up-checkbox" type="checkbox">
+						                    <label for="#multi-step-checkout-enews-sign-up-checkbox">Estou ciente dos termos de contrato</label>
+						                  </fieldset>
+						                </div>
+						                <button class="primary button expanded">Continue para o Pagamento</button>
+						              </div>
+						            </div>
+						          </form>
+						        </div>
+						      </li>
+
+						      <li class="accordion-item" data-accordion-item>
+						        <a href="#" class="accordion-title">2. Pagamento <span class="multi-step-checkout-step-title-subheader">Etapa 2 de 3</span></a>
+						        <div class="accordion-content" data-tab-content>
+						          <form  class="multi-step-checkout-form">
+						            <div class="row">
+						              <div class="small-12 medium-9 column">
+						                <div class="multi-step-checkout-billing-address">
+						                  
+						                </div>
+						                <div><hr class="multi-step-checkout-form-divider"></div>
+
+						                <div class="multi-step-checkout-credit-card-info">
+						                  <h6 class="multi-step-checkout-step-subheader">Cartão de Crédito</h6>
+						                  <ul class="multi-step-checkout-payment-icons">
+						                    <li><img class="multi-step-checkout-payment-icon" src="img/visa.png" height="50" width="50" /></li>
+						                    <li><img class="multi-step-checkout-payment-icon" src="img/mastercard.png" height="50" width="50" /></li>
+						                    <li><img class="multi-step-checkout-payment-icon" src="img/elo.png" height="50" width="50" /></li>
+						                    
+						                  </ul>
+
+						                  Nome<input type="text" placeholder="Nome de acordo com o cartão" required >
+						                  Número<input type="text" placeholder="Número do Cartão" required >
+						                  <div class="row">
+						                    <div class="small-4 column">
+						                      <select required >
+						                        <option value="january">01</option>
+						                        <option value="february">02</option>
+						                        <option value="march">03</option>
+						                        <option value="april">04</option>
+						                      </select>
+						                    </div>
+						                    <div class="small-4 column">
+						                      <select required >
+						                        <option value="year1">2019</option>
+						                        <option value="year2">2018</option>
+						                        <option value="year3">2017</option>
+						                        <option value="year4">2016</option>
+						                      </select>
+						                    </div>
+						                    
+						                  </div>
+
+						                  <div><hr class="multi-step-checkout-form-divider"></div>
+
+						                  <label for="apply-gift-card-code">Código <span>(Opcional)</span>
+						                    <div class="input-group gift-card">
+						                       <input class="input-group-field" type="text" placeholder="Código">
+						                         <div class="input-group-button" placeholder="$">
+
+						                          <input type="submit" class="button primary" value="Aplicar" id="apply-gift-card-code">
+						                        </div>
+						                    </div>
+						                  </label>
+
+						                  <div><hr class="multi-step-checkout-form-divider"></div>
+
+						                  <button class="primary button expanded">Continue para a Confirmação do Pagamento</button>
+						                </div>
+						              </div>
+						            </div>
+						          </form>
+						        </div>
+						      </li>
+
+						      <li class="accordion-item" data-accordion-item>
+						        <a href="#" class="accordion-title">3.Confirmação do Pagamento <span class="multi-step-checkout-step-title-subheader">Etapa 3 de 3</span></a>
+						        <div class="accordion-content" data-tab-content>
+						         <hr class="show-for-small-only order-table-divider">
+						          
+						            <tbody>
+						          
+						            </tbody>
+						          </table>
+						          <div class="">
+						            <div class="row">
+						              <div class="small-12 medium-9 column multi-step-checkout-create-account">
+						                <h6 class="multi-step-checkout-step-subheader">Crie a sua conta <span>(Opcional)</span></h6>
+						                <p class="create-account-desc">Depois de confirmar o pagamento você receberá o material pelo Email.</p>
+						                <form>
+						                  <div class="row">
+						                    <div class="small-12 medium-6 column">
+						                      Senha<input type="text" placeholder="Senha">
+						                    </div>
+						                    <div class="small-12 medium-6 column">
+						                      Confirmação<input type="text" placeholder="Confirme sua senha">
+						                    </div>
+						                  </div>
+						                </form>
+						              </div>
+						            </div>
+
+						            <div><hr class="multi-step-checkout-form-divider"></div>
+
+						            <form>
+						             
+						              <button class="primary button expanded" id="Confirmar" onclick="Cadastro()">Confirmar Pagamento</button>
+						            </form>
+						          </div>
+
+						        </div>
+						      </li>
+						    </ul>
+						  </div>
+						</div>
+
+
+						<div class="callout">
+							<ul class="menu simple">
+								<li><a href="index.html">Página Inicial </a></li>
+								
+							</ul>
+						</div>
+				</div>
+		</div>
+
+		 <!-- COLUNA LATERAL (ASIDE) -->
+		<div class="medium-3 columns" data-sticky-container>
+			<div class="sticky" data-sticky data-anchor="content">
+				<h4><b>&emsp;Top Marcas</b></h4>
+				<ul>
+					
+						<a href="http://www.tagima.com.br/" target="_blank"><img class="thumbnail" src="img/tagima.png" width="200" height="200"></a>
+						<a href="http://eagle.com.br/violao/eagle/folk/#" target="_blank"><img class="thumbnail" src="img/eagle.png" width="200" height="200"></a>
+						<a href="https://www.takamine.com/" target="_blank"><img class="thumbnail" src="img/takamine.png" width="200" height="200"></a>
+						<a href="https://br.yamaha.com/pt/products/musical_instruments/guitars_basses/ac_guitars/index.html" target="_blank"><img class="thumbnail" src="img/yamaha.png" width="200" height="200"></a>
+						<a href="https://www.taylorguitars.com/" target="_blank"><img class="thumbnail" src="img/taylor.png" width="200" height="100"></a>
+						
+	
+				</ul>	
+			</div>
+		</div>
+		</div>
+		 <!-- COLUNA LATERAL (ASIDE) -->
+		<br>
+		<div class="row column">
+			<ul class="pagination" role="navigation" aria-label="Pagination">
+				<li class="disabled">Anterior</li>
+				<li class="current"><span class="show-for-sr">You're on page</span> 1</li>
+				<li><a href="page2.html" aria-label="Page 2">2</a></li>
+				<li class="ellipsis"></li>
+				<li><a href="page2.html" aria-label="Next page">Próxima</a></li>
+			</ul>
+		</div>
+		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+		<script>
+		      $(document).foundation();
+		</script>
+		<hr>
+		<br>
+		<!--DIV COM ÍCONES SOCIAS IMPLEMENTADAS-->
+		<div class="show-for-small-only"> <!-- FOI ADICIONADO UMA CLASSE DE VISUALIZAÇÃO DENTRO DESSA DIV PARA ESSES ÍCONES APAREÇAM SOMENTE EM TELA PEQUENA NO FOOTER -->
+			<a href="https://www.facebook.com/" target="_blank"><img class="thumbnail" src="img/facebook.png" width="35" height="35"></a>
+			<a href="https://www.youtube.com/results?search_query=iniciantes+do+viol%C3%A3o" target="_blank"><img class="thumbnail" src="img/youtube.png" width="35" height="35"></a>
+			<a href="https://www.instagram.com/?hl=pt-br/" target="_blank"><img class="thumbnail" src="img/instagram.png" width="35" height="35"></a>
+		</div>
+		<!--DIV COM ÍCONES SOCIAS IMPLEMENTADAS-->
+		<div class="show-for-medium-only"><!-- FOI ADICIONADO UMA CLASSE DE VISUALIZAÇÃO DENTRO DESSA DIV PARA ESSES ÍCONES APAREÇAM SOMENTE EM TELA MÉDIA NO FOOTER -->
+			<a href="https://www.facebook.com/" target="_blank"><img class="thumbnail" src="img/facebook.png" width="35" height="35"></a>
+			<a href="https://www.youtube.com/results?search_query=iniciantes+do+viol%C3%A3o" target="_blank"><img class="thumbnail" src="img/youtube.png" width="35" height="35"></a>
+			<a href="https://www.instagram.com/?hl=pt-br/" target="_blank"><img class="thumbnail" src="img/instagram.png" width="35" height="35"></a>
+		</div>
+
+		<!-- FOI ADICIONADO O BLOCO RODAPÉ DA COLUNA COM FORMULÁRIO DE CONTATO COM ALTERAÇÕES  https://foundation.zurb.com/building-blocks/blocks/3-column-footer-contact-form.html-->
+	    <div  id="contato" class="three-column-footer-contact-form-container">
+	      <footer class="three-column-footer-contact-form" data-equalizer data-equalize-by-row="true">
+
+	        <div class="footer-left" data-equalizer-watch>
+	          <div class="baseline">
+	            <div class="contact-details">
+	              <h6>Contato</h6>
+	              <p><i class="fa fa-phone fa-lg" aria-hidden="true"></i> (61) ***********</p>
+	              <p><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i> Endereço</a></p>
+	              <p><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i> ****, Brasília-DF, Brasil</p>
+	            </div>
+	            
+	          </div>
+	         </div>
+	        <div class="footer-center" data-equalizer-watch>
+	          <div class="baseline">
+	            <div class="newsletter">
+	             <h6>Entre em Contato</h6>
+	              <div class="input-group ">
+	              <form data-abide> <!-- FORMULÁRIO COM O ATRIBUTO DE VALIDAÇÃO DO FOUNDATION-->
+		            <input class="input-group-field" type="text" placeholder="Name" required pattern="[a-zA-Z]+">
+		   
+		            <input class="input-group-field" type="email" placeholder="Email address"  required>
+		            <textarea placeholder="Message" required></textarea>
+		          </div>
+	              <center><button class="button" type="submit" >Enviar</button></a></center>
+	            </div>
+	          </div>
+	        </div>
+	        <div class="footer-right" data-equalizer-watch>
+	          <div class="baseline">
+
+	            <a href="index.html" ><img class="thumbnail" src="img/iniciantes.png" width="200" height="200"></a>
+	            <h6>Disponibilidade</h6>
+	            <p>Seg - Sex 9:00 - 17:00</p>
+	            <p>Sab - Dom 9:00 - 13:00</p>
+	              <br> 
+	              <p><b>© 2019 Iniciantes do Violão</b></p>
+
+	          </div>
+	        </div>
+	      </footer>
+	</body>
+</html>
+
+
+<!-- LINKS -->
+<!-- TEMPLATE ..................https://foundation.zurb.com/templates-previews-sites-f6-xy-grid/blog.html -->
+<!-- NAV .......................https://foundation.zurb.com/building-blocks/blocks/scrollhide-nav.html -->
+<!-- ÍCONES FIXOS LATERAIS .....https://foundation.zurb.com/building-blocks/blocks/sticky-social-bar.html -->
+<!-- FOOTER ....................https://foundation.zurb.com/building-blocks/blocks/3-column-footer-contact-form.html -->
+<!-- FORMULÁRIO CADASTRO .......https://foundation.zurb.com/building-blocks/blocks/ -->
