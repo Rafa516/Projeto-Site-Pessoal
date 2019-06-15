@@ -293,38 +293,38 @@
 					<a href="https://www.instagram.com/?hl=pt-br/" target="_blank"><img class="thumbnail" src="img/instagram.png" width="35" height="35"></a>
 				</div>
 
-					<!--FORMULÁRIO DE CADASTRO COM 3 ETAPAS https://foundation.zurb.com/building-blocks/blocks/multi-step-checkout.html -->
+					<!--FORMULÁRIO DE CADASTRO COM 2 ETAPAS https://foundation.zurb.com/building-blocks/blocks/multi-step-checkout.html -->
 				<script>Data()</script><br><br>
 				<div class="blog-post">
 					
 						
 						<div class="callout">
 							<ul class="menu simple">
-								<li><h3><b>Cadastro</b></h3></li>
+								<li><h3><b>Cadastro e Pagamento</b></h3></li>
 							</ul>
 						</div>
 						<div class="multi-step-checkout-process">
 						  <div class="multi-step-checkout-process-step">
 						    <ul class="accordion" data-accordion>
 						      <li class="accordion-item is-active" data-accordion-item>
-						        <a href="#" class="accordion-title">1. Cadastro <span class="multi-step-checkout-step-title-subheader">Etapa 1 de 3</span></a>
+						        <a href="#" class="accordion-title">1. Cadastro <span class="multi-step-checkout-step-title-subheader">Etapa 1 de 2</span></a>
 						        <div class="accordion-content" data-tab-content>
-						          <form class="multi-step-checkout-form">
+						          <form method="POST"	action="verifica.php" class="multi-step-checkout-form">
 						            <div class="row">
 						              <div class="small-12 medium-9 column">
 						                <div class="shipping-address multi-step-checkout-step-section">
 						                 
 						                  <label>
-						                    Nome<input type="text" placeholder="Nome" required >
-						                    Sobrenome<input type="text" placeholder="Sobrenome" required >
-						                    Endereço<input type="text" placeholder="Endereço" required >
+						                    Nome<input name="nome" type="text" placeholder="Nome" required >
+						                    Sobrenome<input name="sobrenome"type="text" placeholder="Sobrenome" required >
+						                    Endereço<input name="endereco"type="text" placeholder="Endereço" required >
 						                    <div class="row">
 						                      <div class="small-12 medium-7 column">
-						                        Cidade<input type="text" placeholder="Cidade" required >
+						                        Cidade<input  name="cidade"type="text" placeholder="Cidade" required >
 						                      </div>
 
-						                      <div class="small-6 medium-2 column">
-						                        Estado<select required >
+						                      <div  class="small-6 medium-2 column">
+						                        Estado<select name="estado" required >
 						                          <option value="state1">DF</option>
 						                          <option value="state2">SP</option>
 						                          <option value="state3">RJ</option>
@@ -336,8 +336,8 @@
 						                    </div>
 
 						                    <div><hr class="multi-step-checkout-form-divider"></div>
-						                    Email<input type="email" placeholder="Email" required >
-						                    Celular<input type="text" placeholder=" xxxx-xxx-xxxx" required pattern="^\d{4}-\d{3}-\d{4}$" />
+						                    Email<input name="email" type="email" placeholder="Email" required >
+						                    Celular<input  name="celular" type="text" placeholder=" xxxx-xxx-xxxx" required pattern="^\d{4}-\d{3}-\d{4}$" />
 						                  </label>
 						                </div>
 						               
@@ -355,7 +355,7 @@
 						      </li>
 
 						      <li class="accordion-item" data-accordion-item>
-						        <a href="#" class="accordion-title">2. Pagamento <span class="multi-step-checkout-step-title-subheader">Etapa 2 de 3</span></a>
+						        <a href="#" class="accordion-title">2. Pagamento <span class="multi-step-checkout-step-title-subheader">Etapa 2 de 2</span></a>
 						        <div class="accordion-content" data-tab-content>
 						          <form  class="multi-step-checkout-form">
 						            <div class="row">
@@ -374,23 +374,23 @@
 						                    
 						                  </ul>
 
-						                  Nome<input type="text" placeholder="Nome de acordo com o cartão" required >
+						                  Nome<input type="text" placeholder="De acordo com o cartão" required >
 						                  Número<input type="text" placeholder="Número do Cartão" required >
 						                  <div class="row">
 						                    <div class="small-4 column">
-						                      <select required >
+						                      Mês<select required >
 						                        <option value="january">01</option>
 						                        <option value="february">02</option>
 						                        <option value="march">03</option>
 						                        <option value="april">04</option>
 						                      </select>
 						                    </div>
-						                    <div class="small-4 column">
-						                      <select required >
-						                        <option value="year1">2019</option>
-						                        <option value="year2">2018</option>
-						                        <option value="year3">2017</option>
-						                        <option value="year4">2016</option>
+						                    <div class="small-4 column" >
+						                      Ano<select required >
+						                        <option value="year1">19</option>
+						                        <option value="year2">18</option>
+						                        <option value="year3">17</option>
+						                        <option value="year4">16</option>
 						                      </select>
 						                    </div>
 						                    
@@ -398,72 +398,30 @@
 
 						                  <div><hr class="multi-step-checkout-form-divider"></div>
 
-						                  <label for="apply-gift-card-code">Código <span>(Opcional)</span>
+						                  
 						                    <div class="input-group gift-card">
-						                       <input class="input-group-field" type="text" placeholder="Código">
+						                       
 						                         <div class="input-group-button" placeholder="$">
-
-						                          <input type="submit" class="button primary" value="Aplicar" id="apply-gift-card-code">
 						                        </div>
 						                    </div>
 						                  </label>
 
 						                  <div><hr class="multi-step-checkout-form-divider"></div>
 
-						                  <button class="primary button expanded">Continue para a Confirmação do Pagamento</button>
+						                  <button class="primary button expanded">Pagamento</button>
 						                </div>
 						              </div>
 						            </div>
 						          </form>
 						        </div>
-						      </li>
-
-						      <li class="accordion-item" data-accordion-item>
-						        <a href="#" class="accordion-title">3.Confirmação do Pagamento <span class="multi-step-checkout-step-title-subheader">Etapa 3 de 3</span></a>
-						        <div class="accordion-content" data-tab-content>
-						         <hr class="show-for-small-only order-table-divider">
-						          
-						            <tbody>
-						          
-						            </tbody>
-						          </table>
-						          <div class="">
-						            <div class="row">
-						              <div class="small-12 medium-9 column multi-step-checkout-create-account">
-						                <h6 class="multi-step-checkout-step-subheader">Crie a sua conta <span>(Opcional)</span></h6>
-						                <p class="create-account-desc">Depois de confirmar o pagamento você receberá o material pelo Email.</p>
-						                <form>
-						                  <div class="row">
-						                    <div class="small-12 medium-6 column">
-						                      Senha<input type="text" placeholder="Senha">
-						                    </div>
-						                    <div class="small-12 medium-6 column">
-						                      Confirmação<input type="text" placeholder="Confirme sua senha">
-						                    </div>
-						                  </div>
-						                </form>
-						              </div>
-						            </div>
-
-						            <div><hr class="multi-step-checkout-form-divider"></div>
-
-						            <form>
-						             
-						              <button class="primary button expanded" id="Confirmar" onclick="Cadastro()">Confirmar Pagamento</button>
-						            </form>
-						          </div>
-
-						        </div>
-						      </li>
+						      </li>   
 						    </ul>
 						  </div>
 						</div>
-
-
 						<div class="callout">
 							<ul class="menu simple">
 								<li><a href="index.html">Página Inicial </a></li>
-								
+							
 							</ul>
 						</div>
 				</div>
@@ -486,17 +444,8 @@
 			</div>
 		</div>
 		</div>
-		 <!-- COLUNA LATERAL (ASIDE) -->
+		
 		<br>
-		<div class="row column">
-			<ul class="pagination" role="navigation" aria-label="Pagination">
-				<li class="disabled">Anterior</li>
-				<li class="current"><span class="show-for-sr">You're on page</span> 1</li>
-				<li><a href="page2.html" aria-label="Page 2">2</a></li>
-				<li class="ellipsis"></li>
-				<li><a href="page2.html" aria-label="Next page">Próxima</a></li>
-			</ul>
-		</div>
 		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 		<script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
 		<script>
