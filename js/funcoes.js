@@ -1,4 +1,4 @@
- function Data()
+ function Data() 
 			{
     
 			    var data = new Date();
@@ -8,10 +8,6 @@
 			    document.write(dias[data.getDay()] + ", " + data.getDate() + " de " + meses[data.getMonth()] +  " de "  + data.getFullYear()+".");
     		} 
 
-    		
+    		// Função para mostrar a data 
 
- function Cadastro(){
-
- 	alert("Cadastro e Pagamento efetuado com sucesso.");
-
- }   		
+ 
