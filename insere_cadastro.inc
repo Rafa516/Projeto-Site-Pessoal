@@ -15,7 +15,7 @@
 	$sql .= "('$nome','$sobrenome', '$endereco', '$cidade', '$estado','$email','$celular')";
 
 	if ($conexao->query($sql) === TRUE) {
-	echo '<br><br><center><h5><b><img src="img/titulo.png" height="50" width="50" />Mensagem Enviada<img src="img/titulo.png" height="50" width="50"/></h2></b></center><meta http-equiv="refresh" content="1; url=cadastro.html">';
+	echo '<br><br><center><h5><b><img src="img/titulo.png" height="50" width="50" />Cadastro Efetuad<img src="img/titulo.png" height="50" width="50"/></h2></b></center><meta http-equiv="refresh" content="1; url=cadastro.html">';
 	} 
 	else {
 	echo "Erro: " . $sql . "<br>" . $conexao->error;
